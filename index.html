@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue timer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <input id="timerSetter" type = "text" v-model="time"><label for="timerSetter"> секунд</label>
+    <br>
+    <button @click="startNewTimer">Запустить таймер</button>
+    <br>
+    <br>
+    <Timer 
+      v-for="timer in timers"
+      :key="timer.id"
+      :countdown="timer.countdown"
+    />
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

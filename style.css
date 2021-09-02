@@ -1,0 +1,13 @@
+.timer {
+  border: 1px solid black;
+  width: 500px;
+  display: flex;
+}
+.timer span {
+  width: 50%;
+  padding: 5px;
+}
+
+.timer .count {
+  border-right: 1px solid black;  
+}
